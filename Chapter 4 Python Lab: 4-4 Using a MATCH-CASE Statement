@@ -1,0 +1,34 @@
+# EmployeeBonus2.py - This program calculates an employee's yearly bonus.
+
+# initialize variables.
+bonus_1 = .25
+bonus_2 = .15
+bonus_3 = .10
+no_bonus = 0.00
+employee_bonus = (bonus_1 or bonus_2 or bonus_3 or no_bonus)
+# Get user input.
+employee_name = input("Enter employee's name: ")
+salary_string = input("Enter employee's yearly salary: ")
+rating_string = input("Enter employee's performance rating: ")
+
+# Convert Strings to int or double.
+employee_salary = float(salary_string)
+employee_rating = int(rating_string)
+
+# Use match statement here to calculate bonus based on rating.
+def num_check(x):
+    match x:
+        case .10 | .15 | .25: # Matches .10, .15, or .25
+            print(f"Matched: {x}")
+        case _:
+            print("No Match Found")
+num_check(.10)
+num_check(.15)
+num_check(.25)
+    
+
+# Output.
+print("Employee Name: ", employee_name)
+print(f"Employee Salary: ${employee_salary:.2f}")
+print("Employee Rating: ", employee_rating)
+print(f"Employee Bonus: ${employee_bonus:.2f}")
