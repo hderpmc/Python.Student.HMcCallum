@@ -12,7 +12,8 @@ salesTax = 0.0945
 print("Boudreaux & Thibodeaux's Po-Boy Shop")
 
 choice = int(input("What would you like to order? Type the appropriate number of the menu item: "))
-for choice (item, price) in menu.items():
+
+for choice, (item, price) in menu.items():
     print(f"{choice}. {item}: ${price:.2f}")
 
 if choice in menu:
