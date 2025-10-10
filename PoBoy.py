@@ -1,12 +1,12 @@
 # Boudreaux & Thibodeaux's Po-Boy Shop Program
 
 menu = {
-    1: ("Catfish Poboy", 14.95),
-    2: ("Roast Beef Poboy", 13.95),
-    3: ("Sausage Poboy", 12.95),
-    4: ("Gumbo", 4.95) 
+    1: ("Catfish Poboy:", 14.95),
+    2: ("Roast Beef Poboy:", 13.95),
+    3: ("Sausage Poboy:", 12.95),
+    4: ("Gumbo:", 4.95) 
 }
-(item, price) = menu
+choice, (item, price) = menu
 salesTax = 0.0945
 
 print("Boudreaux & Thibodeaux's Po-Boy Shop")
