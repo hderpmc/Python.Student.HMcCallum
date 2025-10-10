@@ -5,7 +5,6 @@ bonus_1 = .25
 bonus_2 = .15
 bonus_3 = .10
 no_bonus = 0.00
-bonus_rating = bonus_1 or bonus_2 or bonus_3 or no_bonus 
 
 # Get user input.
 employee_name = input("Enter employee's name: ")
@@ -17,25 +16,16 @@ employee_salary = float(salary_string)
 employee_rating = int(rating_string)
 
 # Use match statement here to calculate bonus based on rating.
-def num_check(x):
-    match x:
-        case .10 | .15 | .25:
-            print(f"Matched: {x}")
-        case _:
-            print("No Match Found")
-num_check(.10)
-num_check(.15)
-num_check(.25)
 
-employee_bonus = employee_salary * bonus_rating
-if employee_rating == 1:
-    bonus_rating = .25
-elif employee_rating == 2:
-    bonus_rating = .15
-elif employee_rating == 3:
-    bonus_rating = .1
-elif employee_rating == 0:
-    bonus_rating = 0.00
+match employee_rating:
+    case 1:
+            employee_bonus = employee_salary * bonus_1  
+    case 2:
+            employee_bonus = employee_salary * bonus_2
+    case 3:
+            employee_bonus = employee_salary * bonus_3
+    case _:
+            employee_bonus = no_bonus
 
 # Output.
 print("Employee Name: ", employee_name)
